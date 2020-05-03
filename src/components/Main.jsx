@@ -8,7 +8,7 @@ const Body = () => {
 
     useEffect(() => {
         const heightInMeters = (parseInt(height)/100)
-        const bmi = parseInt(weight/(heightInMeters^2)).toFixed(2)
+        let bmi = parseInt(weight/(heightInMeters^2)).toFixed(2)
         setBmi(bmi)
     }, [height, weight]);
 
@@ -19,14 +19,14 @@ const Body = () => {
     }
 
     return (
-        <div className="Main">
+        <div className="Main container">
             Body Mass Index (BMI) = {bmi}
             <form action="bmi">
 
                 <InputField field="Height (cm)" setter={setHeight}/>
                 <InputField field="Weight (kg)" setter={setWeight}/>
 
-                <button type="reset" onClick={resetForm}>Reset</button>
+                <button type="reset" className="theme" onClick={resetForm}>Reset</button>
             </form>
         </div>
     )
