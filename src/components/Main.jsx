@@ -26,7 +26,7 @@ const Body = () => {
                 <InputField field="Height (cm)" setter={setHeight}/>
                 <InputField field="Weight (kg)" setter={setWeight}/>
 
-                <button type="reset" className="theme" onClick={resetForm}>Reset</button>
+                <button type="reset" className="theme dark-text" onClick={resetForm}>Reset</button>
             </form>
         </div>
     )
