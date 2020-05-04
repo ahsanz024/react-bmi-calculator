@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="Footer">
             <div>Version: {packageJson.version}</div>
-            <a href="https://github.com/ahsanz024/react-bmi-calculator">https://github.com/ahsanz024/react-bmi-calculator</a>
+            <a target="/" href="https://github.com/ahsanz024/react-bmi-calculator">https://github.com/ahsanz024/react-bmi-calculator</a>
         </footer>
     )
 }
