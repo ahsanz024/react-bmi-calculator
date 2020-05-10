@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
   background-color: #282c34;
   min-height: 100vh;
@@ -15,41 +15,12 @@
   border: 1px solid whitesmoke;
 }
 .theme {
-  background: turquoise;
+  background: #57b7ac;
+}
+.dark-text {
+  color: #2f1c1c;
 }
 
 .App-header {
   padding: 25px 0;
-}
-
-.Main {
-  padding: 25px 0
-}
-
-.Main form {
-  margin: 50px 0 0;
-}
-.Main button {
-  width: 150px;
-  height: 50px;
-  margin: 20px auto;
-  font-size: 1.2rem;
-  color: #444444;
-}
-
-.Input-Field {
-  display: flex;
-  border: 1px solid grey;
-  justify-content: space-between;
-  height: 50px;
-  margin: 20px auto;
-  max-width: 300px;
-}
-.Input-Field input {
-  font-size: 18px;
-  max-width: 70px;
-  text-align: center;
-}
-.Input-Field label {
-  margin:auto;
 }

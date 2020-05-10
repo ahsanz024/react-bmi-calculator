@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/df3c9356-6c2a-4221-9732-e680dd713758/deploy-status)](https://app.netlify.com/sites/react-bmi-calculator/deploys)
 
-
+![Screenshot|100x](./public/screenshot.jpg)
 
 ## Available Scripts
 
