@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <header className="App-header theme container dark-text">
         <div>BMI Healthy Weight Calculator</div>
       </header>

@@ -34,23 +34,15 @@ const Body = () => {
         setWeight(0);
     }
 
-    // const calculateBmi = () => {
-    //     const heightInMeters = (parseInt(height)/100)
-    //     const bmi = parseInt(weight/(heightInMeters^2)).toFixed(2)
-    //     return bmi;
-    // }
-
-    
-
     return (
-        <div className="Main container">
+        <div className="main container">
             Body Mass Index (BMI) = {bmi}
 
             <Toggle left="Metric" right="Imperial" changeHandler={setImperial}/>
 
             <form action="bmi">
-                <InputField field={`Weight (${weightUnit})`} setter={setWeight}/>
-                <InputField field={`Height (${heightUnit})`} setter={setHeight}/>
+                <InputField className="weight-input" field={`Weight (${weightUnit})`} setter={setWeight}/>
+                <InputField className="height-input" field={`Height (${heightUnit})`} setter={setHeight}/>
 
                 <button type="reset" className="theme dark-text" onClick={resetForm}>Reset</button>
             </form>

@@ -4,7 +4,7 @@ const Toggle = (props) => {
     const { right, left, changeHandler } = props
 
     return (
-        <div className="Toggle">
+        <div className="toggle">
             <p>{left}</p>
             <label className="label">
                 <input type="checkbox" onChange={(event) => changeHandler(event.target.checked)} />

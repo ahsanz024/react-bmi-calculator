@@ -1,10 +1,10 @@
-.Main {
+.main {
   padding: 25px 0
 }
-.Main form {
+.main form {
   margin: 20px 0 0;
 }
-.Main button {
+.main button {
   width: 150px;
   height: 50px;
   margin: 20px auto;
@@ -12,7 +12,7 @@
 }
 
 /* Input-Field */
-.Input-Field {
+.input-field {
   display: flex;
   border: 1px solid grey;
   justify-content: space-between;
@@ -20,17 +20,17 @@
   margin: 20px auto;
   max-width: 300px;
 }
-.Input-Field input {
+.input-field input {
   font-size: 18px;
   max-width: 70px;
   text-align: center;
 }
-.Input-Field label {
+.input-field label {
   margin:auto;
 }
 
 /* Footer */ 
-.Footer {
+.footer {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -38,25 +38,25 @@
   font-size: 12px;
   color: grey;
 }
-.Footer a {
+.footer a {
   color: #98ccc6;
   text-decoration: none;
   padding: 5px 0 10px;
 }
 
 /* Toggle */
-.Toggle {
+.toggle {
   display: flex;
   flex-direction: row;
   width: 200px;
   justify-content: space-evenly;
   margin: 50px auto 0;
 }
-.Toggle p {
+.toggle p {
   margin: auto;
   font-size: 1rem;
 }
-.Toggle input {
+.toggle input {
   display: none;
 }
 .label {
