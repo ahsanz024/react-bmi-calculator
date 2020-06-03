@@ -1,5 +1,4 @@
 import React from "react";
-// import "./App.css";
 import styles from "./app.module.css";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -10,7 +9,6 @@ function App() {
       <header
         className={`${styles.header} ${styles.theme} ${styles.container} ${styles.darkText}`}
       >
-        {/* // "App-header theme container dark-text"> */}
         <div>BMI Healthy Weight Calculator</div>
       </header>
       <Main />
