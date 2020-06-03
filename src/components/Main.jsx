@@ -40,8 +40,8 @@ const Body = () => {
       .forEach(function (k) {
         if (bmi <= BmiRanges[k]) {
           setBmiStatus(k);
-          const diffPercentage = ((bmi - 22.9) * 100) / 22.9;
-          const centerPercentage = 38;
+          const diffPercentage = ((bmi - 23) * 100) / 23;
+          const centerPercentage = 23; // Value from the scale "Normal position"
           let positionPercentage = centerPercentage + diffPercentage;
 
           if (positionPercentage > 100) {
