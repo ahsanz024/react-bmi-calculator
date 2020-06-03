@@ -1,0 +1,17 @@
+/* Input-Field */
+.inputField {
+  display: flex;
+  border: 1px solid grey;
+  justify-content: space-between;
+  height: 50px;
+  margin: 20px auto;
+  max-width: 300px;
+}
+.inputField input {
+  font-size: 18px;
+  max-width: 70px;
+  text-align: center;
+}
+.inputField label {
+  margin: auto;
+}

@@ -1,0 +1,12 @@
+.main {
+  padding: 25px 0;
+}
+.main form {
+  margin: 20px 0 0;
+}
+.main button {
+  width: 150px;
+  height: 50px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+}
