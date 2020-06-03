@@ -10,3 +10,56 @@
   margin: 20px auto;
   font-size: 1.2rem;
 }
+.title {
+  margin: 0;
+}
+.bmiStatus {
+  height: 40px;
+  margin: 10px auto;
+}
+
+.slider {
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+.scale {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(0, 255, 0, 1) 38%,
+    rgb(255, 102, 0) 60%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  height: 10px;
+  margin: auto;
+}
+.scaleBlock {
+  max-width: 300px;
+  flex-grow: 5;
+}
+
+.label {
+  font-size: 1rem;
+  margin: -4px 0;
+  width: 20%;
+  flex-grow: 1;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #57b7ac;
+  position: relative;
+}
+
+@media (max-width: 30em) {
+  .label {
+    width: fit-content;
+  }
+  .slider {
+    justify-content: space-around;
+  }
+}

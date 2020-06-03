@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import InputField from "./InputField";
 import Toggle from "./Toggle";
+import BmiRanges from "./BmiRanges";
 
 import styles from "./main.module.css";
 import appStyles from "../app.module.css";
@@ -9,6 +10,8 @@ const Body = () => {
   const [bmi, setBmi] = useState(0);
   const [isImperial, setImperial] = useState(false);
 
+  const [bmiStatus, setBmiStatus] = useState("");
+  const [sliderPercentage, setSliderPercentage] = useState(0);
   const [height, setHeight] = useState(0);
   const [heightUnit, setHeightUnit] = useState("cm");
   const [weight, setWeight] = useState(0);
@@ -31,6 +34,26 @@ const Body = () => {
     }
   }, [height, weight, isImperial]);
 
+  useEffect(() => {
+    Object.keys(BmiRanges)
+      .reverse()
+      .forEach(function (k) {
+        if (bmi <= BmiRanges[k]) {
+          setBmiStatus(k);
+          const diffPercentage = ((bmi - 22.9) * 100) / 22.9;
+          const centerPercentage = 38;
+          let positionPercentage = centerPercentage + diffPercentage;
+
+          if (positionPercentage > 100) {
+            positionPercentage = 100;
+          } else if (positionPercentage < 0) {
+            positionPercentage = 0;
+          }
+          setSliderPercentage(positionPercentage);
+        }
+      });
+  }, [bmi]);
+
   const resetForm = () => {
     setBmi(0);
     setHeight(0);
@@ -39,7 +62,21 @@ const Body = () => {
 
   return (
     <div className={`${styles.main} ${appStyles.container}`}>
-      Body Mass Index (BMI) = {bmi}
+      <h4 className={styles.title}> Body Mass Index (BMI)</h4>
+      <h5 className={styles.bmiStatus}>
+        {bmi === 0 ? "" : bmi} {bmi === 0 ? "" : `[${bmiStatus}]`}
+      </h5>
+      <div className={styles.slider}>
+        <p className={styles.label}>Underweight</p>
+        <div className={styles.scaleBlock}>
+          <div className={styles.scale} />
+          <div
+            className={styles.arrow}
+            style={{ left: `calc(${sliderPercentage}% - 10px)` }}
+          />
+        </div>
+        <p className={styles.label}>Obese</p>
+      </div>
       <Toggle left="Metric" right="Imperial" changeHandler={setImperial} />
       <form action="bmi">
         <InputField field={`Weight (${weightUnit})`} setter={setWeight} />
