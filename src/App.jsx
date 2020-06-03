@@ -1,18 +1,19 @@
-import React from 'react';
-import './App.css';
-import './Styles.css';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import React from "react";
+import styles from "./app.module.css";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="app">
-      <header className="App-header theme container dark-text">
+    <div className={styles.app}>
+      <header
+        className={`${styles.header} ${styles.theme} ${styles.container} ${styles.darkText}`}
+      >
         <div>BMI Healthy Weight Calculator</div>
       </header>
-      <Main/>
+      <Main />
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }

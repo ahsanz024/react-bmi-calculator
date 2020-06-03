@@ -1,0 +1,14 @@
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  color: grey;
+}
+.footer a {
+  color: #98ccc6;
+  text-decoration: none;
+  padding: 5px 0 10px;
+}

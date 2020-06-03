@@ -17,10 +17,9 @@
 .theme {
   background: #57b7ac;
 }
-.dark-text {
+.darkText {
   color: #2f1c1c;
 }
-
-.App-header {
+.header {
   padding: 25px 0;
 }
